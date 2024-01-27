@@ -4,6 +4,9 @@ import * as S3 from "aws-sdk/clients/s3";
 import { Table, Button } from "antd";
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
+// Load environment variables from .env file
+require("dotenv").config();
+
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState("");
@@ -21,9 +24,9 @@ const FileUpload = () => {
   const handleFileUpload = async () => {
     try {
       const config = {
-        accessKeyId: "AKIA4MTWLKXVLDXPUAUP",
-        secretAccessKey: "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",
-        region: "ap-southeast-2",
+        accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY,
+        region: process.env.REACT_APP_AWS_REGION,
       };
       const s3 = new S3(config);
 
