@@ -7,3 +7,12 @@ module.exports = {
     },
   },
 };
+const webpack = require("webpack");
+
+module.exports = {
+  resolve: {
+    fallback: {
+      os: require.resolve("os-browserify/browser"),
+    },
+  },
+};
