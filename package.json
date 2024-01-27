@@ -9,6 +9,7 @@
     "antd": "^5.13.2",
     "aws-sdk": "^2.1545.0",
     "chart.js": "^4.4.1",
+    "crypto-browserify": "^3.12.0",
     "dotenv": "^16.4.1",
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
