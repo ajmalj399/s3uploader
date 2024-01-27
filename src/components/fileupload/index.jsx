@@ -41,7 +41,6 @@ const FileUpload = () => {
 
       setUploadStatus("File uploaded successfully!");
       setShowTable(true);
-      // ... (existing upload code)
 
       // Fetch and set the content of the uploaded file
       const fileParams = { Bucket: "cavlisensordata", Key: selectedFile.name };
