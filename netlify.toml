@@ -2,8 +2,4 @@
   command = "npm run build"
   publish = "build"
   functions = "lambda"
-  # ... other settings
-
-[context.production.environment]
-  NODE_VERSION = "14"
-  WEBPACK_CONFIG_JS = "./webpack.config.js"
+  environment = { NODE_VERSION = "14", WEBPACK_CONFIG_JS = "./webpack.config.js" }
