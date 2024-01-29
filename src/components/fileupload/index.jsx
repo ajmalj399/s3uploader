@@ -5,13 +5,15 @@ import { Table, Button } from "antd";
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 // Load environment variables from .env file
-require("dotenv").config();
+
+// require("dotenv").config();
 
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState("");
   const [timeData, setTimeData] = useState(null);
   const [voltageData, setVoltageData] = useState(null);
+
   const [showTable, setShowTable] = useState(false);
   const [showLineChart, setShowLineChart] = useState(false);
 
@@ -25,6 +27,7 @@ const FileUpload = () => {
     try {
       const config = {
         accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+
         secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY,
         region: process.env.REACT_APP_AWS_REGION,
       };
